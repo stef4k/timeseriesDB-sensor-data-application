@@ -1,5 +1,6 @@
 CREATE EXTENSION IF NOT EXISTS timescaledb;
 
+
 DROP TABLE IF EXISTS accelerometer_data;
 DROP TABLE IF EXISTS blood_volume_pulse;
 DROP TABLE IF EXISTS interstitial_glucose;
@@ -8,6 +9,12 @@ DROP TABLE IF EXISTS food_log;
 DROP TABLE IF EXISTS heart_rate_data;
 DROP TABLE IF EXISTS ibi_data;
 DROP TABLE IF EXISTS temperature_data;
+DROP TABLE IF EXISTS demographics;
+
+CREATE TABLE demographics ( 
+	ID SERIAL PRIMARY KEY,
+	Gender VARCHAR(6) NOT NULL,
+	HbA1c NUMERIC(3, 1));
 
 
 CREATE TABLE accelerometer_data  (
@@ -16,12 +23,15 @@ CREATE TABLE accelerometer_data  (
     acc_y	NUMERIC,
 	acc_z	NUMERIC
 );
+-- Convert the regular table into a hypertable
+SELECT create_hypertable('accelerometer_data', 'ts');
 
 
 CREATE TABLE blood_volume_pulse (
     ts	TIMESTAMPTZ	NOT NULL,
 	bvp	NUMERIC
 );
+SELECT create_hypertable('blood_volume_pulse', 'ts');
 
 CREATE TABLE interstitial_glucose  (
 	ind Serial,
@@ -38,11 +48,15 @@ CREATE TABLE interstitial_glucose  (
 	glucose_rate_change numeric,
 	transmitter_time NUMERIC
 );
+SELECT create_hypertable('interstitial_glucose', 'ts');
+
 
 CREATE TABLE electrodermal_activity(
 	ts	TIMESTAMPTZ	NOT NULL,
 	eda	numeric
 );
+SELECT create_hypertable('electrodermal_activity', 'ts');
+
 
 CREATE TABLE food_log (
     --entry_id SERIAL PRIMARY KEY,          -- Unique identifier for each entry
@@ -62,17 +76,23 @@ CREATE TABLE food_log (
     total_fat DECIMAL(10, 2)              -- Total fat content
 );
 
+
 CREATE TABLE heart_rate_data (
     datetime TIMESTAMPTZ,
     hr DECIMAL(5, 2)
 );
+SELECT create_hypertable('heart_rate_data', 'datetime');
+
 
 CREATE TABLE ibi_data (
     event_time TIMESTAMPTZ,  -- Stores date and time with timezone info
     ibi NUMERIC(10, 6)       -- Allows up to 10 digits with 6 decimal places for precision
 );
+SELECT create_hypertable('ibi_data', 'event_time');
+
 
 CREATE TABLE temperature_data (
     event_time TIMESTAMPTZ,  -- Stores date and time with timezone info
     temp NUMERIC(5, 2)       -- Allows up to 5 digits with 2 decimal places for precision (e.g., 999.99)
 );
+SELECT create_hypertable('temperature_data', 'event_time');
