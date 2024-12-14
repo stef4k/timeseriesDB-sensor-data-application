@@ -46,7 +46,7 @@ CREATE TABLE interstitial_glucose  (
 	glucose_value NUMERIC,
 	insulin_value NUMERIC,
 	carb_value NUMERIC,
-	duration interval,
+	duration interval NULL,
 	glucose_rate_change numeric,
 	transmitter_time NUMERIC,
 	participant_id INTEGER REFERENCES demographics(id)
