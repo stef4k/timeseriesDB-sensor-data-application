@@ -1,97 +1,97 @@
-database,scale_factor,query_type,min,mean,median,max,stddev,sum,count,wall_clock_time
-influx,5,avg-daily-driving-duration,194.28,300.25,298.5,369.1,16.42,150100,500,18868.928
-influx,5,avg-daily-driving-session,279.01,409.87,407.21,531.36,22.3,204900,500,25709.428
-influx,5,avg-load,5080.32,7439.43,7453.69,7985.15,226.94,3719700,500,467526.96
-influx,5,avg-vs-projected-fuel-consumption,213.65,758.58,760.74,1470.91,218.74,379300,500,47522.796
-influx,5,breakdown-frequency,1792.32,2732.25,2744.45,3001.6,134,1366100,500,171771.09
-influx,5,daily-activity,166.45,255.05,252.29,366.4,19.56,127500,500,16007.709
-influx,5,high-load,0.55,1.45,1.21,6.58,0.79,700,500,94.914
-influx,5,last-loc,0.5,1.61,1.21,12.99,1.52,800,500,106.382
-influx,5,long-daily-sessions,3.57,7.27,6.94,17.62,2,3600,500,460.789
-influx,5,long-driving-sessions,1.1,2.32,2.19,5.02,0.62,1200,500,148.376
-influx,5,low-fuel,0.71,1.99,1.63,13.1,1.56,1000,500,130.977
-influx,5,stationary-trucks,2.28,5.03,4.69,15.03,1.99,2500,500,320.362
-timescaledb,5,avg-daily-driving-duration,218.22,537.41,374.42,1612.99,341.95,268700,500,33960.077
-timescaledb,5,avg-daily-driving-session,230.06,550.41,384.74,1564.73,351.92,275200,500,34626.075
-timescaledb,5,avg-load,163.3,374.33,287.45,1086.53,211.45,187200,500,23545.272
-timescaledb,5,avg-vs-projected-fuel-consumption,274.93,690.01,515.18,2058.75,420.31,345000,500,43520.717
-timescaledb,5,breakdown-frequency,206.04,540.2,338.62,1641.09,347.64,270100,500,33899.683
-timescaledb,5,daily-activity,261.98,606.28,392.22,1815.49,415.87,303100,500,38194.809
-timescaledb,5,high-load,0.45,1.17,1,12.55,1.31,600,500,78.233
-timescaledb,5,last-loc,0.46,1.2,0.98,14.18,1.41,600,500,79.287
-timescaledb,5,long-daily-sessions,41.48,75.01,74.03,111.52,10.94,37500,500,4717.836
-timescaledb,5,long-driving-sessions,10.31,15.15,14.82,25.49,3.17,7600,500,957.475
-timescaledb,5,low-fuel,0.43,1.2,1,15.38,1.53,600,500,80.051
-timescaledb,5,stationary-trucks,0.76,1.38,1.15,14.07,1.16,700,500,90.078
-influx,10,avg-daily-driving-duration,387.01,621.95,620.13,717.5,28.4,311000,500,39061.943
-influx,10,avg-daily-driving-session,525.76,853.07,849.57,1020.67,45.46,426500,500,53582.301
-influx,10,avg-load,10845.7,15796.27,15586.82,18301.95,784.24,7898100,500,992620.614
-influx,10,avg-vs-projected-fuel-consumption,407.17,1609.4,1571.39,3796.48,521.83,804700,500,100830.209
-influx,10,breakdown-frequency,3848.19,5100.67,5107.45,5506.56,152.15,2550300,500,320638.683
-influx,10,daily-activity,317.95,475.32,473.87,590.17,28.7,237700,500,29846.146
-influx,10,high-load,0.7,2.41,2.24,9.97,1.33,1200,500,155.541
-influx,10,last-loc,0.72,2.62,2.35,11.14,1.71,1300,500,169.844
-influx,10,long-daily-sessions,4.7,10.78,10.13,22.73,3.42,5400,500,681.083
-influx,10,long-driving-sessions,1.31,3.42,2.96,12.34,1.61,1700,500,221.664
-influx,10,low-fuel,0.8,3.36,3.25,9,1.96,1700,500,214.878
-influx,10,stationary-trucks,4.15,8.84,8.67,20.66,2.17,4400,500,558.985
-timescaledb,10,avg-daily-driving-duration,447.2,1111.56,774.08,3668.22,743.56,555800,500,70062.3
-timescaledb,10,avg-daily-driving-session,415.81,1103.55,636.93,3591.93,885.8,551800,500,69636.629
-timescaledb,10,avg-load,323.15,741.31,557.57,2131.45,418.67,370700,500,46524.638
-timescaledb,10,avg-vs-projected-fuel-consumption,1012.86,2864.45,1544,9637.89,2409.17,1432200,500,180707.62
-timescaledb,10,breakdown-frequency,385.25,1119.16,672.38,3476.22,805.83,559600,500,70540.864
-timescaledb,10,daily-activity,516.91,1293.41,786.98,4880.64,1099.61,646700,500,81386.306
-timescaledb,10,high-load,0.12,0.65,0.39,15.68,1.56,300,500,47.318
-timescaledb,10,last-loc,0.13,0.87,0.4,25.81,3.17,400,500,66.364
-timescaledb,10,long-daily-sessions,94.34,148.71,148.07,206.74,16.82,74400,500,9333.793
-timescaledb,10,long-driving-sessions,21.62,31.73,30.82,52.57,5.98,15900,500,2001.131
-timescaledb,10,low-fuel,0.13,0.7,0.41,16.39,1.7,400,500,49.535
-timescaledb,10,stationary-trucks,0.97,2.08,1.83,13.42,1.39,1000,500,134.86
-influx,25,avg-daily-driving-duration,1062.4,1604.03,1590.91,1913.34,73.03,802000,500,100658.04
-influx,25,avg-daily-driving-session,1512.7,2167.42,2148.74,2471.42,105.89,1083700,500,135838.477
-influx,25,avg-load,26811.39,38701.97,38703.1,41232.38,1154.3,19351000,500,2432221.097
-influx,25,avg-vs-projected-fuel-consumption,1258.3,4188.08,4159.49,8341.25,1086.21,2094000,500,262474.626
-influx,25,breakdown-frequency,9148.42,14155.63,14187.01,15538.69,480.21,7077800,500,889596.715
-influx,25,daily-activity,779.71,1082.26,1080.89,1229.63,53.66,541100,500,67889.152
-influx,25,high-load,2.17,5.11,4.92,11.16,1.57,2600,500,326.017
-influx,25,last-loc,2.02,5.83,5.25,26.88,3.12,2900,500,380.539
-influx,25,long-daily-sessions,10.79,27.45,26.59,62.55,7.79,13700,500,1729.018
-influx,25,long-driving-sessions,2.69,7.07,6.45,23.21,3.15,3500,500,448.333
-influx,25,low-fuel,2.45,6.92,6.67,14.65,2.28,3500,500,438.826
-influx,25,stationary-trucks,9.22,22.1,20.98,84.75,7.43,11000,500,1391.675
-timescaledb,25,avg-daily-driving-duration,1103.55,3099.47,2206.21,13252.09,2732.12,1549700,500,194491.497
-timescaledb,25,avg-daily-driving-session,1041.63,3186.32,1567.04,13672.96,3218.85,1593200,500,202120.204
-timescaledb,25,avg-load,923.14,2003.63,1235.52,5976.06,1408.34,1001800,500,125954.822
-timescaledb,25,avg-vs-projected-fuel-consumption,2398.98,7109.03,4513.53,30028.8,5490.92,3554500,500,447467.581
-timescaledb,25,breakdown-frequency,1382.21,3034.81,1859.9,12758.53,2719.45,1517400,500,191198.788
-timescaledb,25,daily-activity,1418.37,3594.5,1854.14,16119.3,3692.02,1797300,500,227531.212
-timescaledb,25,high-load,0.59,1.52,1.14,18.33,1.93,800,500,100.192
-timescaledb,25,last-loc,0.59,1.69,1.12,29.1,3.46,800,500,113.853
-timescaledb,25,long-daily-sessions,202.24,377.9,337.36,1047.87,119.16,188900,500,23734.988
-timescaledb,25,long-driving-sessions,45.25,79.07,71.01,448.61,45.01,39500,500,4973.11
-timescaledb,25,low-fuel,0.6,1.65,1.17,22.5,2.69,800,500,109.39
-timescaledb,25,stationary-trucks,2.18,8.17,3.05,56.75,12.33,4100,500,531.26
-influx,50,avg-daily-driving-duration,1873.28,3275.24,3249.53,3785.98,159.19,1637600,500,205737.516
-influx,50,avg-daily-driving-session,2997.89,4497.85,4550.91,5245.18,277.53,2248900,500,282291.963
-influx,50,avg-load,59455.49,81709.67,81842.18,84324.35,2034.09,40854900,500,5135659.867
-influx,50,avg-vs-projected-fuel-consumption,2255.23,8372.62,8393.73,15124.48,1662.6,4186300,500,524895.525
-influx,50,breakdown-frequency,18929.66,28946.21,29112.32,30469.12,1043.09,14473100,500,1818595.304
-influx,50,daily-activity,1178.5,2238.4,2231.93,2630.4,126.27,1119200,500,140427.467
-influx,50,high-load,2.63,8.53,8.1,34.53,3.51,4300,500,544.474
-influx,50,last-loc,3.1,10.93,8.96,114.61,11.24,5500,500,697.984
-influx,50,long-daily-sessions,17.3,52.55,50.81,117.97,16.7,26300,500,3300.395
-influx,50,long-driving-sessions,4.42,12.15,11.43,37.65,4.42,6100,500,769.871
-influx,50,low-fuel,4.62,13.24,13.11,24.78,4.55,6600,500,839.689
-influx,50,stationary-trucks,23.61,43.89,43.12,71.11,7.21,21900,500,2762.454
-timescaledb,50,avg-daily-driving-duration,2723.58,7287.36,3529.6,30309.38,7729.34,3643700,500,460592.98
-timescaledb,50,avg-daily-driving-session,1978.18,7253.7,3437.82,31688.7,7944.87,3626900,500,457699.624
-timescaledb,50,avg-load,1872.64,4036.15,3011.71,12890.62,2583.23,2018100,500,253552.18
-timescaledb,50,avg-vs-projected-fuel-consumption,6279.42,25787.65,14072.83,182181.89,25130.26,12893800,500,1620141.451
-timescaledb,50,breakdown-frequency,2370.94,6717.31,3576.19,29442.05,6768.54,3358700,500,423978.191
-timescaledb,50,daily-activity,3099.65,8360,3858.56,39948.29,9854.94,4180000,500,530161.793
-timescaledb,50,high-load,0.43,1.65,1.27,23.77,2.32,800,500,110.158
-timescaledb,50,last-loc,0.43,2.92,1.32,95.26,11.74,1500,500,206.427
-timescaledb,50,long-daily-sessions,514.22,842.68,771.65,2348.16,269.56,421300,500,53126.804
-timescaledb,50,long-driving-sessions,74.94,205.64,145.66,2141.7,175.2,102800,500,12918.244
-timescaledb,50,low-fuel,0.46,2.42,1.32,63.02,7.65,1200,500,165.947
-timescaledb,50,stationary-trucks,4.21,56.33,75.6,123.19,36.27,28200,500,3555.73
+database,scale_factor,query_type,min,mean,median,max,stddev,sum,count,wall_clock_time,description
+influx,5,avg-daily-driving-duration,194.28,300.25,298.5,369.1,16.42,150100,500,18868.928,Calculate average daily driving duration per driver
+influx,5,avg-daily-driving-session,279.01,409.87,407.21,531.36,22.3,204900,500,25709.428,Calculate average daily driving session per driver
+influx,5,avg-load,5080.32,7439.43,7453.69,7985.15,226.94,3719700,500,467526.96,Calculate average load per truck model per fleet
+influx,5,avg-vs-projected-fuel-consumption,213.65,758.58,760.74,1470.91,218.74,379300,500,47522.796,Calculate average vs. projected fuel consumption per fleet
+influx,5,breakdown-frequency,1792.32,2732.25,2744.45,3001.6,134,1366100,500,171771.09,Calculate breakdown frequency by truck model
+influx,5,daily-activity,166.45,255.05,252.29,366.4,19.56,127500,500,16007.709,Get the number of hours truck has been active (vs. out-of-commission) per day per fleet
+influx,5,high-load,0.55,1.45,1.21,6.58,0.79,700,500,94.914,Fetch trucks with high current load (over 90% load capacity)
+influx,5,last-loc,0.5,1.61,1.21,12.99,1.52,800,500,106.382,Fetch real-time (i.e. last) location of each truck
+influx,5,long-daily-sessions,3.57,7.27,6.94,17.62,2,3600,500,460.789,Get trucks which drove more than 10 hours in the last 24 hours
+influx,5,long-driving-sessions,1.1,2.32,2.19,5.02,0.62,1200,500,148.376,Get trucks which haven't rested for at least 20 mins in the last 4 hours
+influx,5,low-fuel,0.71,1.99,1.63,13.1,1.56,1000,500,130.977,Fetch all trucks with low fuel (less than 10%)
+influx,5,stationary-trucks,2.28,5.03,4.69,15.03,1.99,2500,500,320.362,Fetch all trucks that are stationary (low avg velocity in last 10 mins)
+timescaledb,5,avg-daily-driving-duration,218.22,537.41,374.42,1612.99,341.95,268700,500,33960.077,Calculate average daily driving duration per driver
+timescaledb,5,avg-daily-driving-session,230.06,550.41,384.74,1564.73,351.92,275200,500,34626.075,Calculate average daily driving session per driver
+timescaledb,5,avg-load,163.3,374.33,287.45,1086.53,211.45,187200,500,23545.272,Calculate average load per truck model per fleet
+timescaledb,5,avg-vs-projected-fuel-consumption,274.93,690.01,515.18,2058.75,420.31,345000,500,43520.717,Calculate average vs. projected fuel consumption per fleet
+timescaledb,5,breakdown-frequency,206.04,540.2,338.62,1641.09,347.64,270100,500,33899.683,Calculate breakdown frequency by truck model
+timescaledb,5,daily-activity,261.98,606.28,392.22,1815.49,415.87,303100,500,38194.809,Get the number of hours truck has been active (vs. out-of-commission) per day per fleet
+timescaledb,5,high-load,0.45,1.17,1,12.55,1.31,600,500,78.233,Fetch trucks with high current load (over 90% load capacity)
+timescaledb,5,last-loc,0.46,1.2,0.98,14.18,1.41,600,500,79.287,Fetch real-time (i.e. last) location of each truck
+timescaledb,5,long-daily-sessions,41.48,75.01,74.03,111.52,10.94,37500,500,4717.836,Get trucks which drove more than 10 hours in the last 24 hours
+timescaledb,5,long-driving-sessions,10.31,15.15,14.82,25.49,3.17,7600,500,957.475,Get trucks which haven't rested for at least 20 mins in the last 4 hours
+timescaledb,5,low-fuel,0.43,1.2,1,15.38,1.53,600,500,80.051,Fetch all trucks with low fuel (less than 10%)
+timescaledb,5,stationary-trucks,0.76,1.38,1.15,14.07,1.16,700,500,90.078,Fetch all trucks that are stationary (low avg velocity in last 10 mins)
+influx,10,avg-daily-driving-duration,387.01,621.95,620.13,717.5,28.4,311000,500,39061.943,Calculate average daily driving duration per driver
+influx,10,avg-daily-driving-session,525.76,853.07,849.57,1020.67,45.46,426500,500,53582.301,Calculate average daily driving session per driver
+influx,10,avg-load,10845.7,15796.27,15586.82,18301.95,784.24,7898100,500,992620.614,Calculate average load per truck model per fleet
+influx,10,avg-vs-projected-fuel-consumption,407.17,1609.4,1571.39,3796.48,521.83,804700,500,100830.209,Calculate average vs. projected fuel consumption per fleet
+influx,10,breakdown-frequency,3848.19,5100.67,5107.45,5506.56,152.15,2550300,500,320638.683,Calculate breakdown frequency by truck model
+influx,10,daily-activity,317.95,475.32,473.87,590.17,28.7,237700,500,29846.146,Get the number of hours truck has been active (vs. out-of-commission) per day per fleet
+influx,10,high-load,0.7,2.41,2.24,9.97,1.33,1200,500,155.541,Fetch trucks with high current load (over 90% load capacity)
+influx,10,last-loc,0.72,2.62,2.35,11.14,1.71,1300,500,169.844,Fetch real-time (i.e. last) location of each truck
+influx,10,long-daily-sessions,4.7,10.78,10.13,22.73,3.42,5400,500,681.083,Get trucks which drove more than 10 hours in the last 24 hours
+influx,10,long-driving-sessions,1.31,3.42,2.96,12.34,1.61,1700,500,221.664,Get trucks which haven't rested for at least 20 mins in the last 4 hours
+influx,10,low-fuel,0.8,3.36,3.25,9,1.96,1700,500,214.878,Fetch all trucks with low fuel (less than 10%)
+influx,10,stationary-trucks,4.15,8.84,8.67,20.66,2.17,4400,500,558.985,Fetch all trucks that are stationary (low avg velocity in last 10 mins)
+timescaledb,10,avg-daily-driving-duration,447.2,1111.56,774.08,3668.22,743.56,555800,500,70062.3,Calculate average daily driving duration per driver
+timescaledb,10,avg-daily-driving-session,415.81,1103.55,636.93,3591.93,885.8,551800,500,69636.629,Calculate average daily driving session per driver
+timescaledb,10,avg-load,323.15,741.31,557.57,2131.45,418.67,370700,500,46524.638,Calculate average load per truck model per fleet
+timescaledb,10,avg-vs-projected-fuel-consumption,1012.86,2864.45,1544,9637.89,2409.17,1432200,500,180707.62,Calculate average vs. projected fuel consumption per fleet
+timescaledb,10,breakdown-frequency,385.25,1119.16,672.38,3476.22,805.83,559600,500,70540.864,Calculate breakdown frequency by truck model
+timescaledb,10,daily-activity,516.91,1293.41,786.98,4880.64,1099.61,646700,500,81386.306,Get the number of hours truck has been active (vs. out-of-commission) per day per fleet
+timescaledb,10,high-load,0.12,0.65,0.39,15.68,1.56,300,500,47.318,Fetch trucks with high current load (over 90% load capacity)
+timescaledb,10,last-loc,0.13,0.87,0.4,25.81,3.17,400,500,66.364,Fetch real-time (i.e. last) location of each truck
+timescaledb,10,long-daily-sessions,94.34,148.71,148.07,206.74,16.82,74400,500,9333.793,Get trucks which drove more than 10 hours in the last 24 hours
+timescaledb,10,long-driving-sessions,21.62,31.73,30.82,52.57,5.98,15900,500,2001.131,Get trucks which haven't rested for at least 20 mins in the last 4 hours
+timescaledb,10,low-fuel,0.13,0.7,0.41,16.39,1.7,400,500,49.535,Fetch all trucks with low fuel (less than 10%)
+timescaledb,10,stationary-trucks,0.97,2.08,1.83,13.42,1.39,1000,500,134.86,Fetch all trucks that are stationary (low avg velocity in last 10 mins)
+influx,25,avg-daily-driving-duration,1062.4,1604.03,1590.91,1913.34,73.03,802000,500,100658.04,Calculate average daily driving duration per driver
+influx,25,avg-daily-driving-session,1512.7,2167.42,2148.74,2471.42,105.89,1083700,500,135838.477,Calculate average daily driving session per driver
+influx,25,avg-load,26811.39,38701.97,38703.1,41232.38,1154.3,19351000,500,2432221.097,Calculate average load per truck model per fleet
+influx,25,avg-vs-projected-fuel-consumption,1258.3,4188.08,4159.49,8341.25,1086.21,2094000,500,262474.626,Calculate average vs. projected fuel consumption per fleet
+influx,25,breakdown-frequency,9148.42,14155.63,14187.01,15538.69,480.21,7077800,500,889596.715,Calculate breakdown frequency by truck model
+influx,25,daily-activity,779.71,1082.26,1080.89,1229.63,53.66,541100,500,67889.152,Get the number of hours truck has been active (vs. out-of-commission) per day per fleet
+influx,25,high-load,2.17,5.11,4.92,11.16,1.57,2600,500,326.017,Fetch trucks with high current load (over 90% load capacity)
+influx,25,last-loc,2.02,5.83,5.25,26.88,3.12,2900,500,380.539,Fetch real-time (i.e. last) location of each truck
+influx,25,long-daily-sessions,10.79,27.45,26.59,62.55,7.79,13700,500,1729.018,Get trucks which drove more than 10 hours in the last 24 hours
+influx,25,long-driving-sessions,2.69,7.07,6.45,23.21,3.15,3500,500,448.333,Get trucks which haven't rested for at least 20 mins in the last 4 hours
+influx,25,low-fuel,2.45,6.92,6.67,14.65,2.28,3500,500,438.826,Fetch all trucks with low fuel (less than 10%)
+influx,25,stationary-trucks,9.22,22.1,20.98,84.75,7.43,11000,500,1391.675,Fetch all trucks that are stationary (low avg velocity in last 10 mins)
+timescaledb,25,avg-daily-driving-duration,1103.55,3099.47,2206.21,13252.09,2732.12,1549700,500,194491.497,Calculate average daily driving duration per driver
+timescaledb,25,avg-daily-driving-session,1041.63,3186.32,1567.04,13672.96,3218.85,1593200,500,202120.204,Calculate average daily driving session per driver
+timescaledb,25,avg-load,923.14,2003.63,1235.52,5976.06,1408.34,1001800,500,125954.822,Calculate average load per truck model per fleet
+timescaledb,25,avg-vs-projected-fuel-consumption,2398.98,7109.03,4513.53,30028.8,5490.92,3554500,500,447467.581,Calculate average vs. projected fuel consumption per fleet
+timescaledb,25,breakdown-frequency,1382.21,3034.81,1859.9,12758.53,2719.45,1517400,500,191198.788,Calculate breakdown frequency by truck model
+timescaledb,25,daily-activity,1418.37,3594.5,1854.14,16119.3,3692.02,1797300,500,227531.212,Get the number of hours truck has been active (vs. out-of-commission) per day per fleet
+timescaledb,25,high-load,0.59,1.52,1.14,18.33,1.93,800,500,100.192,Fetch trucks with high current load (over 90% load capacity)
+timescaledb,25,last-loc,0.59,1.69,1.12,29.1,3.46,800,500,113.853,Fetch real-time (i.e. last) location of each truck
+timescaledb,25,long-daily-sessions,202.24,377.9,337.36,1047.87,119.16,188900,500,23734.988,Get trucks which drove more than 10 hours in the last 24 hours
+timescaledb,25,long-driving-sessions,45.25,79.07,71.01,448.61,45.01,39500,500,4973.11,Get trucks which haven't rested for at least 20 mins in the last 4 hours
+timescaledb,25,low-fuel,0.6,1.65,1.17,22.5,2.69,800,500,109.39,Fetch all trucks with low fuel (less than 10%)
+timescaledb,25,stationary-trucks,2.18,8.17,3.05,56.75,12.33,4100,500,531.26,Fetch all trucks that are stationary (low avg velocity in last 10 mins)
+influx,50,avg-daily-driving-duration,1873.28,3275.24,3249.53,3785.98,159.19,1637600,500,205737.516,Calculate average daily driving duration per driver
+influx,50,avg-daily-driving-session,2997.89,4497.85,4550.91,5245.18,277.53,2248900,500,282291.963,Calculate average daily driving session per driver
+influx,50,avg-load,59455.49,81709.67,81842.18,84324.35,2034.09,40854900,500,5135659.867,Calculate average load per truck model per fleet
+influx,50,avg-vs-projected-fuel-consumption,2255.23,8372.62,8393.73,15124.48,1662.6,4186300,500,524895.525,Calculate average vs. projected fuel consumption per fleet
+influx,50,breakdown-frequency,18929.66,28946.21,29112.32,30469.12,1043.09,14473100,500,1818595.304,Calculate breakdown frequency by truck model
+influx,50,daily-activity,1178.5,2238.4,2231.93,2630.4,126.27,1119200,500,140427.467,Get the number of hours truck has been active (vs. out-of-commission) per day per fleet
+influx,50,high-load,2.63,8.53,8.1,34.53,3.51,4300,500,544.474,Fetch trucks with high current load (over 90% load capacity)
+influx,50,last-loc,3.1,10.93,8.96,114.61,11.24,5500,500,697.984,Fetch real-time (i.e. last) location of each truck
+influx,50,long-daily-sessions,17.3,52.55,50.81,117.97,16.7,26300,500,3300.395,Get trucks which drove more than 10 hours in the last 24 hours
+influx,50,long-driving-sessions,4.42,12.15,11.43,37.65,4.42,6100,500,769.871,Get trucks which haven't rested for at least 20 mins in the last 4 hours
+influx,50,low-fuel,4.62,13.24,13.11,24.78,4.55,6600,500,839.689,Fetch all trucks with low fuel (less than 10%)
+influx,50,stationary-trucks,23.61,43.89,43.12,71.11,7.21,21900,500,2762.454,Fetch all trucks that are stationary (low avg velocity in last 10 mins)
+timescaledb,50,avg-daily-driving-duration,2723.58,7287.36,3529.6,30309.38,7729.34,3643700,500,460592.98,Calculate average daily driving duration per driver
+timescaledb,50,avg-daily-driving-session,1978.18,7253.7,3437.82,31688.7,7944.87,3626900,500,457699.624,Calculate average daily driving session per driver
+timescaledb,50,avg-load,1872.64,4036.15,3011.71,12890.62,2583.23,2018100,500,253552.18,Calculate average load per truck model per fleet
+timescaledb,50,avg-vs-projected-fuel-consumption,6279.42,25787.65,14072.83,182181.89,25130.26,12893800,500,1620141.451,Calculate average vs. projected fuel consumption per fleet
+timescaledb,50,breakdown-frequency,2370.94,6717.31,3576.19,29442.05,6768.54,3358700,500,423978.191,Calculate breakdown frequency by truck model
+timescaledb,50,daily-activity,3099.65,8360,3858.56,39948.29,9854.94,4180000,500,530161.793,Get the number of hours truck has been active (vs. out-of-commission) per day per fleet
+timescaledb,50,high-load,0.43,1.65,1.27,23.77,2.32,800,500,110.158,Fetch trucks with high current load (over 90% load capacity)
+timescaledb,50,last-loc,0.43,2.92,1.32,95.26,11.74,1500,500,206.427,Fetch real-time (i.e. last) location of each truck
+timescaledb,50,long-daily-sessions,514.22,842.68,771.65,2348.16,269.56,421300,500,53126.804,Get trucks which drove more than 10 hours in the last 24 hours
+timescaledb,50,long-driving-sessions,74.94,205.64,145.66,2141.7,175.2,102800,500,12918.244,Get trucks which haven't rested for at least 20 mins in the last 4 hours
+timescaledb,50,low-fuel,0.46,2.42,1.32,63.02,7.65,1200,500,165.947,Fetch all trucks with low fuel (less than 10%)
+timescaledb,50,stationary-trucks,4.21,56.33,75.6,123.19,36.27,28200,500,3555.73,Fetch all trucks that are stationary (low avg velocity in last 10 mins)
