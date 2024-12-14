@@ -1,0 +1,12 @@
+last-loc
+low-fuel
+high-load
+stationary-trucks
+long-driving-sessions
+long-daily-sessions
+avg-vs-projected-fuel-consumption
+avg-daily-driving-duration
+avg-daily-driving-session
+avg-load
+daily-activity
+breakdown-frequency
