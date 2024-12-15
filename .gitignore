@@ -20,3 +20,6 @@
 
 timeenv
 Demographics.csv
+__pycache__
+adhoc.ipynb
+results
