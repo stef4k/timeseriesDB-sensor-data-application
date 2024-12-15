@@ -24,16 +24,19 @@ CREATE TABLE accelerometer_data  (
 	acc_z	NUMERIC,
 	participant_id INTEGER REFERENCES demographics(id)
 );
--- Convert the regular table into a hypertable
-SELECT create_hypertable('accelerometer_data', 'ts');
-
+SELECT create_hypertable('accelerometer_data', by_range('ts', INTERVAL '1 day'));
+ALTER TABLE accelerometer_data SET (timescaledb.compress, timescaledb.compress_orderby='ts');
+SELECT add_compression_policy('accelerometer_data', INTERVAL '1 second');
 
 CREATE TABLE blood_volume_pulse (
     ts	TIMESTAMPTZ	NOT NULL,
 	bvp	NUMERIC,
 	participant_id INTEGER REFERENCES demographics(id)
 );
-SELECT create_hypertable('blood_volume_pulse', 'ts');
+SELECT create_hypertable('blood_volume_pulse', by_range('ts', INTERVAL '1 day'));
+ALTER TABLE blood_volume_pulse SET (timescaledb.compress, timescaledb.compress_orderby='ts');
+SELECT add_compression_policy('blood_volume_pulse', INTERVAL '1 second');
+
 
 CREATE TABLE interstitial_glucose  (
     ts	TIMESTAMPTZ,
@@ -50,7 +53,9 @@ CREATE TABLE interstitial_glucose  (
 	transmitter_time NUMERIC,
 	participant_id INTEGER REFERENCES demographics(id)
 );
-SELECT create_hypertable('interstitial_glucose', 'ts');
+SELECT create_hypertable('interstitial_glucose',by_range('ts', INTERVAL '1 day'));
+ALTER TABLE interstitial_glucose SET(timescaledb.compress, timescaledb.compress_orderby='ts');
+SELECT add_compression_policy('interstitial_glucose', INTERVAL '1 second');
 
 
 CREATE TABLE electrodermal_activity(
@@ -58,14 +63,18 @@ CREATE TABLE electrodermal_activity(
 	eda	numeric,
 	participant_id INTEGER REFERENCES demographics(id)
 );
-SELECT create_hypertable('electrodermal_activity', 'ts');
+SELECT create_hypertable('electrodermal_activity', by_range('ts', INTERVAL '1 day'));
+ALTER TABLE electrodermal_activity SET (timescaledb.compress, timescaledb.compress_orderby='ts');
+SELECT add_compression_policy('electrodermal_activity', INTERVAL '1 second');
 
 CREATE TABLE heart_rate_data (
     datetime TIMESTAMPTZ,
     hr DECIMAL(5, 2),
 	participant_id INTEGER REFERENCES demographics(id)
 );
-SELECT create_hypertable('heart_rate_data', 'datetime');
+SELECT create_hypertable('heart_rate_data',by_range('datetime', INTERVAL '1 day'));
+ALTER TABLE heart_rate_data SET (timescaledb.compress, timescaledb.compress_orderby='datetime');
+SELECT add_compression_policy('heart_rate_data', INTERVAL '1 second');
 
 
 CREATE TABLE ibi_data (
@@ -73,12 +82,15 @@ CREATE TABLE ibi_data (
     ibi NUMERIC(10, 6),       -- Allows up to 10 digits with 6 decimal places for precision
 	participant_id INTEGER REFERENCES demographics(id)
 );
-SELECT create_hypertable('ibi_data', 'event_time');
-
+SELECT create_hypertable('ibi_data',by_range('event_time', INTERVAL '1 day'));
+ALTER TABLE ibi_data SET (timescaledb.compress, timescaledb.compress_orderby='event_time');
+SELECT add_compression_policy('ibi_data', INTERVAL '1 second');
 
 CREATE TABLE temperature_data (
     event_time TIMESTAMPTZ,  -- Stores date and time with timezone info
     temp NUMERIC(5, 2) ,      -- Allows up to 5 digits with 2 decimal places for precision (e.g., 999.99)
 	participant_id INTEGER REFERENCES demographics(id)
 );
-SELECT create_hypertable('temperature_data', 'event_time');
+SELECT create_hypertable('temperature_data', by_range('event_time', INTERVAL '1 day'));
+ALTER TABLE temperature_data SET (timescaledb.compress, timescaledb.compress_orderby='event_time');
+SELECT add_compression_policy('temperature_data', INTERVAL '1 second');

@@ -25,7 +25,9 @@ CREATE TABLE accelerometer_data  (
 	participant_id INTEGER REFERENCES demographics(id)
 );
 -- Convert the regular table into a hypertable
-SELECT create_hypertable('accelerometer_data', 'ts');
+SELECT create_hypertable('accelerometer_data', by_range('ts', INTERVAL '1 day'));
+-- Allows compression
+ALTER TABLE accelerometer_data SET (timescaledb.compress, timescaledb.compress_orderby='ts');
 
 
 CREATE TABLE blood_volume_pulse (
@@ -33,7 +35,9 @@ CREATE TABLE blood_volume_pulse (
 	bvp	NUMERIC,
 	participant_id INTEGER REFERENCES demographics(id)
 );
-SELECT create_hypertable('blood_volume_pulse', 'ts');
+SELECT create_hypertable('blood_volume_pulse', by_range('ts', INTERVAL '1 day'));
+-- Allows compression
+ALTER TABLE blood_volume_pulse SET (timescaledb.compress, timescaledb.compress_orderby='ts');
 
 -- CREATE TABLE interstitial_glucose  (
 -- 	ind Serial,
@@ -59,7 +63,9 @@ CREATE TABLE electrodermal_activity(
 	eda	numeric,
 	participant_id INTEGER REFERENCES demographics(id)
 );
-SELECT create_hypertable('electrodermal_activity', 'ts');
+SELECT create_hypertable('electrodermal_activity', by_range('ts', INTERVAL '1 day'));
+-- Allows compression
+ALTER TABLE electrodermal_activity SET (timescaledb.compress, timescaledb.compress_orderby='ts');
 
 
 -- CREATE TABLE food_log (
@@ -99,8 +105,10 @@ SELECT create_hypertable('electrodermal_activity', 'ts');
 
 
 CREATE TABLE temperature_data (
-    event_time TIMESTAMPTZ,  -- Stores date and time with timezone info
+    event_time TIMESTAMPTZ NOT NULL,  -- Stores date and time with timezone info
     temp NUMERIC(5, 2) ,      -- Allows up to 5 digits with 2 decimal places for precision (e.g., 999.99)
 	participant_id INTEGER REFERENCES demographics(id)
 );
-SELECT create_hypertable('temperature_data', 'event_time');
+SELECT create_hypertable('temperature_data', by_range('event_time', INTERVAL '1 day'));
+-- Allows compression
+ALTER TABLE temperature_data SET (timescaledb.compress, timescaledb.compress_orderby='event_time');
