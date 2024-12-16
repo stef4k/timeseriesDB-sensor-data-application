@@ -1,4 +1,4 @@
--- Steps count daily and weekly using TimescaleDB time_bucket function
+-- Steps count daily and weekly 
 WITH accelerometer_magnitude AS (
     SELECT
         participant_id,

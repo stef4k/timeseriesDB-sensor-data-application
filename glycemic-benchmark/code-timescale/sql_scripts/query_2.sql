@@ -1,3 +1,4 @@
+-- Exercise Detection
 WITH movement_activity AS (
     SELECT
         participant_id,
