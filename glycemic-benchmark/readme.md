@@ -1,6 +1,6 @@
 Setup Steps
 
-1. Place your data folder named "data" in this repository 
+1. Place your data in folder named "data" in this repository 
 2. The data folder structure will be directories with different users data and a demographics.csv file
 3. Create "new_data" and "results" folder in the same level as data
 4. Create a python environment and install all the libraries shared in the requirements.txt
