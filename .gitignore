@@ -17,3 +17,10 @@
 014/
 015/
 016/
+
+timeenv
+Demographics.csv
+__pycache__
+adhoc.ipynb
+results
+.DS_Store
