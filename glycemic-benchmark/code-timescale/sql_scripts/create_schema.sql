@@ -25,7 +25,9 @@ CREATE TABLE accelerometer_data  (
 	participant_id INTEGER REFERENCES demographics(id)
 );
 SELECT create_hypertable('accelerometer_data','ts',chunk_time_interval => INTERVAL '1 day');
-ALTER TABLE accelerometer_data SET (timescaledb.compress, timescaledb.compress_orderby='ts');
+ALTER TABLE accelerometer_data SET (timescaledb.compress, 
+timescaledb.compress_segmentby = 'participant_id',
+timescaledb.compress_orderby='ts DESC');
 SELECT add_compression_policy('accelerometer_data', INTERVAL '2 weeks');
 
 CREATE TABLE blood_volume_pulse (
@@ -34,7 +36,9 @@ CREATE TABLE blood_volume_pulse (
 	participant_id INTEGER REFERENCES demographics(id)
 );
 SELECT create_hypertable('blood_volume_pulse','ts',chunk_time_interval => INTERVAL '1 day');
-ALTER TABLE blood_volume_pulse SET (timescaledb.compress, timescaledb.compress_orderby='ts');
+ALTER TABLE blood_volume_pulse SET (timescaledb.compress, 
+timescaledb.compress_segmentby = 'participant_id',
+timescaledb.compress_orderby='ts DESC');
 SELECT add_compression_policy('blood_volume_pulse', INTERVAL '2 weeks');
 
 
@@ -54,7 +58,9 @@ CREATE TABLE interstitial_glucose  (
 	participant_id INTEGER REFERENCES demographics(id)
 );
 SELECT create_hypertable('interstitial_glucose','ts',chunk_time_interval => INTERVAL '1 day');
-ALTER TABLE interstitial_glucose SET(timescaledb.compress, timescaledb.compress_orderby='ts');
+ALTER TABLE interstitial_glucose SET (timescaledb.compress, 
+timescaledb.compress_segmentby = 'participant_id',
+timescaledb.compress_orderby='ts DESC');
 SELECT add_compression_policy('interstitial_glucose', INTERVAL '2 weeks');
 
 
@@ -64,7 +70,9 @@ CREATE TABLE electrodermal_activity(
 	participant_id INTEGER REFERENCES demographics(id)
 );
 SELECT create_hypertable('electrodermal_activity','ts',chunk_time_interval => INTERVAL '1 day');
-ALTER TABLE electrodermal_activity SET (timescaledb.compress, timescaledb.compress_orderby='ts');
+ALTER TABLE electrodermal_activity SET (timescaledb.compress, 
+timescaledb.compress_segmentby = 'participant_id',
+timescaledb.compress_orderby='ts DESC');
 SELECT add_compression_policy('electrodermal_activity', INTERVAL '2 weeks');
 
 CREATE TABLE heart_rate_data (
@@ -73,7 +81,9 @@ CREATE TABLE heart_rate_data (
 	participant_id INTEGER REFERENCES demographics(id)
 );
 SELECT create_hypertable('heart_rate_data','datetime',chunk_time_interval => INTERVAL '1 day');
-ALTER TABLE heart_rate_data SET (timescaledb.compress, timescaledb.compress_orderby='datetime');
+ALTER TABLE heart_rate_data SET (timescaledb.compress, 
+timescaledb.compress_segmentby = 'participant_id',
+timescaledb.compress_orderby='datetime DESC');
 SELECT add_compression_policy('heart_rate_data', INTERVAL '2 weeks');
 
 
@@ -83,7 +93,9 @@ CREATE TABLE ibi_data (
 	participant_id INTEGER REFERENCES demographics(id)
 );
 SELECT create_hypertable('ibi_data','event_time',chunk_time_interval => INTERVAL '1 day');
-ALTER TABLE ibi_data SET (timescaledb.compress, timescaledb.compress_orderby='event_time');
+ALTER TABLE ibi_data SET (timescaledb.compress, 
+timescaledb.compress_segmentby = 'participant_id',
+timescaledb.compress_orderby='event_time DESC');
 SELECT add_compression_policy('ibi_data', INTERVAL '2 weeks');
 
 CREATE TABLE temperature_data (
@@ -92,5 +104,7 @@ CREATE TABLE temperature_data (
 	participant_id INTEGER REFERENCES demographics(id)
 );
 SELECT create_hypertable('temperature_data','event_time',chunk_time_interval => INTERVAL '1 day');
-ALTER TABLE temperature_data SET (timescaledb.compress, timescaledb.compress_orderby='event_time');
+ALTER TABLE temperature_data SET (timescaledb.compress, 
+timescaledb.compress_segmentby = 'participant_id',
+timescaledb.compress_orderby='event_time DESC');
 SELECT add_compression_policy('temperature_data', INTERVAL '2 weeks');
