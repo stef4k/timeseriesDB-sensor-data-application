@@ -1,26 +1,9 @@
--- Detect anomalies in glucose readings
-WITH glucose_stats AS (
-    SELECT 
-        time_bucket('1 hour', ts) AS hour,
-        participant_id,
-        AVG(glucose_value) AS mean_glucose,
-        STDDEV(glucose_value) AS std_glucose
-    FROM interstitial_glucose ig
-    GROUP BY hour, participant_id
+WITH movement_data AS (
+  SELECT ts, participant_id, 
+         acc_x, acc_y, acc_z, 
+         SQRT(POWER(acc_x, 2) + POWER(acc_y, 2) + POWER(acc_z, 2)) AS movement
+  FROM accelerometer_data
 )
-SELECT 
-    hour,
-    g.participant_id,
-    mean_glucose,
-    std_glucose,
-    CASE 
-        WHEN ABS(glucose_value - mean_glucose) > 2 * std_glucose 
-        THEN 'Anomaly' 
-        ELSE 'Normal' 
-    END AS glucose_status
-FROM interstitial_glucose g
-JOIN glucose_stats s ON 
-    time_bucket('1 hour', g.ts) = s.hour AND 
-    g.participant_id = s.participant_id
-WHERE ABS(g.glucose_value - s.mean_glucose) > 2 * s.std_glucose;
-
+SELECT ts, participant_id, acc_x, acc_y, acc_z, MAX(movement) AS max_movement
+FROM movement_data
+GROUP BY ts, participant_id, acc_x, acc_y, acc_z;

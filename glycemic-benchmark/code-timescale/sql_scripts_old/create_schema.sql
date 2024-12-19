@@ -24,7 +24,7 @@ CREATE TABLE accelerometer_data  (
 	acc_z	NUMERIC,
 	participant_id INTEGER REFERENCES demographics(id)
 );
-SELECT create_hypertable('accelerometer_data','ts',chunk_time_interval => INTERVAL '7 days');
+SELECT create_hypertable('accelerometer_data','ts',chunk_time_interval => INTERVAL '1 day');
 ALTER TABLE accelerometer_data SET (timescaledb.compress, 
 timescaledb.compress_segmentby = 'participant_id',
 timescaledb.compress_orderby='ts DESC');
@@ -35,7 +35,7 @@ CREATE TABLE blood_volume_pulse (
 	bvp	NUMERIC,
 	participant_id INTEGER REFERENCES demographics(id)
 );
-SELECT create_hypertable('blood_volume_pulse','ts',chunk_time_interval => INTERVAL '7 days');
+SELECT create_hypertable('blood_volume_pulse','ts',chunk_time_interval => INTERVAL '1 day');
 ALTER TABLE blood_volume_pulse SET (timescaledb.compress, 
 timescaledb.compress_segmentby = 'participant_id',
 timescaledb.compress_orderby='ts DESC');
@@ -57,7 +57,7 @@ CREATE TABLE interstitial_glucose  (
 	transmitter_time NUMERIC,
 	participant_id INTEGER REFERENCES demographics(id)
 );
-SELECT create_hypertable('interstitial_glucose','ts',chunk_time_interval => INTERVAL '7 days');
+SELECT create_hypertable('interstitial_glucose','ts',chunk_time_interval => INTERVAL '1 day');
 ALTER TABLE interstitial_glucose SET (timescaledb.compress, 
 timescaledb.compress_segmentby = 'participant_id',
 timescaledb.compress_orderby='ts DESC');
@@ -69,7 +69,7 @@ CREATE TABLE electrodermal_activity(
 	eda	numeric,
 	participant_id INTEGER REFERENCES demographics(id)
 );
-SELECT create_hypertable('electrodermal_activity','ts',chunk_time_interval => INTERVAL '7 days');
+SELECT create_hypertable('electrodermal_activity','ts',chunk_time_interval => INTERVAL '1 day');
 ALTER TABLE electrodermal_activity SET (timescaledb.compress, 
 timescaledb.compress_segmentby = 'participant_id',
 timescaledb.compress_orderby='ts DESC');
@@ -80,7 +80,7 @@ CREATE TABLE heart_rate_data (
     hr DECIMAL(5, 2),
 	participant_id INTEGER REFERENCES demographics(id)
 );
-SELECT create_hypertable('heart_rate_data','datetime',chunk_time_interval => INTERVAL '7 days');
+SELECT create_hypertable('heart_rate_data','datetime',chunk_time_interval => INTERVAL '1 day');
 ALTER TABLE heart_rate_data SET (timescaledb.compress, 
 timescaledb.compress_segmentby = 'participant_id',
 timescaledb.compress_orderby='datetime DESC');
@@ -92,7 +92,7 @@ CREATE TABLE ibi_data (
     ibi NUMERIC(10, 6),       -- Allows up to 10 digits with 6 decimal places for precision
 	participant_id INTEGER REFERENCES demographics(id)
 );
-SELECT create_hypertable('ibi_data','event_time',chunk_time_interval => INTERVAL '7 days');
+SELECT create_hypertable('ibi_data','event_time',chunk_time_interval => INTERVAL '1 day');
 ALTER TABLE ibi_data SET (timescaledb.compress, 
 timescaledb.compress_segmentby = 'participant_id',
 timescaledb.compress_orderby='event_time DESC');
@@ -103,7 +103,7 @@ CREATE TABLE temperature_data (
     temp NUMERIC(5, 2) ,      -- Allows up to 5 digits with 2 decimal places for precision (e.g., 999.99)
 	participant_id INTEGER REFERENCES demographics(id)
 );
-SELECT create_hypertable('temperature_data','event_time',chunk_time_interval => INTERVAL '7 days');
+SELECT create_hypertable('temperature_data','event_time',chunk_time_interval => INTERVAL '1 day');
 ALTER TABLE temperature_data SET (timescaledb.compress, 
 timescaledb.compress_segmentby = 'participant_id',
 timescaledb.compress_orderby='event_time DESC');

@@ -1,29 +1,12 @@
--- Glucose Spike Detection
-WITH glucose_changes AS (
-    SELECT
-        participant_id,
-        glucose_value AS current_glucose,
-        LEAD(ts) OVER (PARTITION BY participant_id ORDER BY ts) AS next_time,
-        LEAD(glucose_value) OVER (PARTITION BY participant_id ORDER BY ts) AS next_glucose,
-        LEAD(ts) OVER (PARTITION BY participant_id ORDER BY ts) - ts AS time_diff,
-        LEAD(glucose_value) OVER (PARTITION BY participant_id ORDER BY ts) - glucose_value AS glucose_change
-    FROM
-        interstitial_glucose
-    WHERE
-        glucose_value IS NOT NULL
+WITH mean_bvp AS (
+  SELECT time_bucket('5 seconds', ts::TIMESTAMP) AS bucket, 
+         participant_id, 
+         AVG(bvp) AS mean_bvp
+  FROM blood_volume_pulse
+  WHERE ts::TIMESTAMP BETWEEN TIMESTAMP '2020-02-13 22:29:00' AND TIMESTAMP '2020-02-13 22:30:00'
+  GROUP BY bucket, participant_id
 )
-SELECT
-    participant_id,
-    next_time,
-    current_glucose,
-    next_glucose,
-    glucose_change,
-    time_diff
-FROM
-    glucose_changes
-WHERE
-    glucose_change > 14
-    AND time_diff <= INTERVAL '30 minutes' 
-ORDER BY
-    participant_id,
-    current_time;
+SELECT bucket, 
+       participant_id, 
+       mean_bvp - LAG(mean_bvp) OVER (PARTITION BY participant_id ORDER BY bucket) AS bvp_rate
+FROM mean_bvp;
