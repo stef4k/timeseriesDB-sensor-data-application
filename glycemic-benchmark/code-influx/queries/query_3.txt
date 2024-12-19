@@ -1,0 +1,7 @@
+SELECT MIN("daily_avg_eda") AS "min_daily_avg_eda"
+FROM (
+    SELECT MEAN("eda") AS "daily_avg_eda"
+    FROM "electrodermal_activity"
+    WHERE ({list_of_participants})
+    GROUP BY time(1d)
+)

@@ -1,0 +1,3 @@
+SELECT SPREAD("temp") AS temp_diff
+FROM "temperature_data"
+GROUP BY "participant_id"

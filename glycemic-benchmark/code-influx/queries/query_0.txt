@@ -1,0 +1,4 @@
+SELECT TOP("hr", 3), "participant_id"
+FROM "heart_rate_data"
+WHERE time >= '2020-02-14T00:00:00Z' AND time <= '2020-02-20T23:59:59Z'
+GROUP BY time(1d), "participant_id"

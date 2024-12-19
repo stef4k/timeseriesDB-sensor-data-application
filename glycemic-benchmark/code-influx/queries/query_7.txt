@@ -1,0 +1,4 @@
+SELECT non_negative_difference(MAX(glucose_value)) AS glucose_diff
+FROM "interstitial_glucose"
+WHERE time >= '2020-02-18T00:00:00Z' AND time < '2020-02-28T00:00:00Z'
+GROUP BY time(1d), "participant_id"

@@ -1,0 +1,4 @@
+SELECT derivative(mean("bvp"), 1s) AS bvp_rate
+FROM "blood_volume_pulse"
+WHERE time >= '2020-02-13T22:29:00Z' AND time < '2020-02-13T22:30:00Z'
+GROUP BY time(5s), "participant_id"

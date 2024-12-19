@@ -1,0 +1,4 @@
+SELECT COUNT("ibi") AS ibi_count
+FROM "ibi_data"
+WHERE "ibi" > 1
+GROUP BY "participant_id"

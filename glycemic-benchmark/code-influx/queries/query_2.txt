@@ -1,0 +1,4 @@
+SELECT MEAN("glucose_value") AS "mean_g", STDDEV("glucose_value") AS "std_g"
+FROM "interstitial_glucose"
+WHERE ({list_of_participants}) AND time >= '2020-02-15T00:00:00Z' AND time < '2020-02-25T23:59:59Z'
+GROUP BY time(1h)

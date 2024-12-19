@@ -1,0 +1,5 @@
+SELECT MAX("movement"), "acc_x", "acc_y", "acc_z"
+FROM (
+    SELECT SQRT(POW("acc_x",2) + POW("acc_y",2) + POW("acc_z",2)) AS "movement", "acc_x", "acc_y", "acc_z"
+    FROM "accelerometer_data"
+)
