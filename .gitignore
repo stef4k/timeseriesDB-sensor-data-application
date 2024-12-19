@@ -22,6 +22,8 @@ bin/
 lib/
 include/
 
+pyvenv.cfg
+
 timeenv
 Demographics.csv
 __pycache__
