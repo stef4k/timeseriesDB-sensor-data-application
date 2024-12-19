@@ -1,9 +1,9 @@
 table_name,total_size_mb
-blood_volume_pulse,879.6953
-accelerometer_data,264.8906
-electrodermal_activity,34.375
-heart_rate_data,11.6328
-temperature_data,10.9688
-ibi_data,8.3672
-interstitial_glucose,1.5938
-Total,1211.5235000000002
+blood_volume_pulse,877.4609
+accelerometer_data,262.6797
+electrodermal_activity,32.2969
+heart_rate_data,10.1094
+temperature_data,9.0313
+ibi_data,7.0234
+interstitial_glucose,0.4688
+Total,1199.0704000000005
