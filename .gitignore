@@ -18,9 +18,12 @@
 015/
 016/
 
+bin/
+lib/
+include/
+
 timeenv
 Demographics.csv
 __pycache__
 adhoc.ipynb
-results
 .DS_Store
