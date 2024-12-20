@@ -10,4 +10,5 @@ Setup Steps
 8. Once the new set of data is created you are good to go for the timescaledb benchmarking
 9. Input the scale_factor in config.py file and also number of times you want to run the queries for statistical significance.
 10. Now after modifying the config.py , open the benchmark.ipynb and run all the cells
-11. Your results for the choosen scale will get populated in results folder.
+11. Your results for the chosen scale will get populated in results folder.
+12. To proceed with the InfluxDB benchmarking, go to the code-influx folder, update the config.py file according to the scale_factor and number of runs you would like to perform, and finally run all the cells in benchmark.ipynb. 
