@@ -1,6 +1,6 @@
 Setup Steps
 
-1. Download the cleaned data folder from [google drive](https://drive.google.com/file/d/18d1mzAQDvX9w7-_B_QqDZWG2_L_4jaCv/view?usp=sharing). This folder contains the various data csv files that include the foreign keys to each participant
+1. Download the data from the [website](https://physionet.org/content/big-ideas-glycemic-wearable/1.1.2/)
 2. Place your data in folder named "data" in this folder
 3. The data folder structure will be directories with different users data and a demographics.csv file
 4. Create "new_data" and "results" folder in the same level as data
